@@ -56,10 +56,11 @@ section {
 .openingSprawl {
   background-image: linear-gradient(rgba(0, 0, 0, 0.131), rgba(0, 0, 0, 0.131)),
     url(../imgs/landingImg.jpeg);
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position: center;
+  background-repeat: no-repeat;
   background-size: 100%;
-  height: 100vh;
+  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,10 +92,51 @@ section {
   justify-content: center;
 }
 
+.aboutUsImgTxtContainer {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.aboutUsImgTxtContainer img {
+  width: 38vw;
+  border-radius: 0.8rem;
+  margin-left: auto;
+  background-position: center;
+}
+
+.aboutUsTxt {
+  width: 80%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* overflow-y: scroll; */
+}
+
 .aboutUsTxtBlock {
-  width: 60%;
+  width: 98%;
   color: var(--textColor);
   font-size: 2rem;
+}
+
+.aboutUsTxtBlock a {
+  color: var(--textColor);
+  text-decoration: none;
+  border-bottom: 0.1rem solid var(--textColor);
+}
+
+.jobTypeList {
+  font-size: 2rem;
+  color: var(--textColor);
+  list-style: none;
+  padding-left: 0;
+}
+
+.jobType {
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
 }
 
 /* Our Work section styling */
@@ -111,6 +153,7 @@ section {
 
 .controlsContainer {
   width: 100%;
+  height: 90vh;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -138,6 +181,12 @@ section {
   z-index: 4;
 }
 
+#ourWorkControls {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .controlBtn:hover {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.602);
 }
@@ -148,40 +197,21 @@ section {
   padding: 0;
 }
 
-.ourWorkDisplayContainer {
-  /* height: 90vh; */
+/* .ourWorkDisplayContainer {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   width: 80%;
   overflow-y: hidden;
-}
-
-.ourWorkTextContainer {
-  overflow-y: hidden;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-}
-
-.ourWorkTxtBlock {
-  color: var(--textColor);
-  font-size: 2rem;
-}
+} */
 
 .demoWorkImg {
-  height: 90vh;
-  background-size: 100%;
+  object-fit: fill;
   border-radius: 0.8rem;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  width: 62.5rem;
+  height: 35rem;
+  border: 0;
+  background-repeat: no-repeat;
 }
 
 .demoImgOne {
@@ -198,6 +228,10 @@ section {
 
 .demoImgFour {
   background-image: url(../imgs/demoImgFour.jpeg);
+}
+
+.demoImgFive {
+  background: url(../imgs/demoImgFiveIMG_5225.jpg);
 }
 
 /* Reviews section styling */
@@ -220,18 +254,21 @@ section {
 .reviewsContainer {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
 }
 
 .reviewWrapper {
-  width: 100%;
+  width: 100vw;
+  overflow-x: hidden;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .review {
   display: flex;
   flex-direction: column;
-  width: 40vw;
   padding-left: 2rem;
   padding-right: 2rem;
   border-radius: 0.8rem;
@@ -383,6 +420,10 @@ section {
 /* formating for mobile */
 
 @media screen and (max-width: 768px) {
+  section {
+    padding-bottom: 10rem;
+  }
+
   .openingSprawl {
     padding-top: 0.1rem;
     background-repeat: no-repeat;
@@ -399,21 +440,36 @@ section {
   }
 
   .sectionHeader {
-    margin-bottom: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .aboutUsImgTxtContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .aboutUsImgTxtContainer img {
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
   }
 
   .aboutUsTxtBlock {
-    width: 80%;
+    width: 90%;
+    font: 2rem;
   }
 
   .controlsContainer {
-    height: 60vh;
+    height: 55vh;
   }
 
   .ourWorkDisplayContainer {
     margin-left: auto;
     margin-right: auto;
-
+    align-self: flex-end;
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
@@ -428,7 +484,7 @@ section {
   }
 
   .demoWorkImg {
-    height: 40vh;
+    height: 100vh;
     background-size: 160%;
     width: 95%;
     background-repeat: no-repeat;
@@ -439,12 +495,11 @@ section {
     background-position: center;
   }
 
-  .ourWorkTextContainer {
-    height: 40vh;
-  }
-
   .reviewsContainer {
     width: 100vw;
+    height: 60vh;
+    display: flex;
+    /* align-items: flex-end; */
   }
 
   .reviewWrapper {
@@ -452,7 +507,7 @@ section {
     align-items: center;
     justify-content: center;
     height: 52vh;
-    padding-bottom: 2rem;
+    align-self: flex-end;
   }
   .review {
     width: 95vw;
@@ -461,10 +516,19 @@ section {
     display: none;
   }
 
+  #ourWorkControls {
+    height: 80vh;
+    background-size: 170%;
+  }
+
+  #ourWorkControls .controlBtn {
+    align-self: center;
+  }
+
   .controlBtn {
     font-size: 2rem;
     background-color: transparent;
-    align-self: flex-end;
+    align-self: flex-start;
   }
 
   .controlBtn:hover {

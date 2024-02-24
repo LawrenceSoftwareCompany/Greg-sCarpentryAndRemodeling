@@ -24,38 +24,48 @@
       <!-- About us section -->
       <section class="aboutUsSection" id="aboutUs">
         <h2 class="sectionHeader">About us</h2>
-        <p class="aboutUsTxtBlock">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
-          dolores consectetur ipsum molestias iusto, vero iste earum quas ex
-          eveniet saepe architecto obcaecati? Cupiditate vero praesentium animi
-          perferendis. Temporibus, eius. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Eius, optio maxime eos eum ipsam quidem corporis
-          dolores porro voluptate ut ipsum non. Saepe blanditiis, nesciunt
-          veniam dolor quasi quisquam asperiores!
-        </p>
+        <div class="aboutUsImgTxtContainer">
+          <img src="/assets/imgs/Greg.jpg" alt="" />
+          <div class="aboutUsTxt">
+            <p class="aboutUsTxtBlock">
+              we do carpentry and remodeling in the Salt Lake City UT area. We
+              have our r101 license and our insured. We primaryly do:
+            </p>
 
-        <p class="aboutUsTxtBlock">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet saepe
-          repellendus sit. Vero, atque voluptas ducimus deleniti officiis eos
-          corporis ex ipsam. Vitae nam maxime dolor, eaque vel esse voluptas.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-          molestias, optio recusandae ratione, sit incidunt sequi harum impedit
-          minima porro numquam aliquam quia nam. Dolorem officiis aperiam facere
-          a hic!
-        </p>
+            <ul class="jobTypeList">
+              <li class="jobType">Framing</li>
+              <li class="jobType">Flooring</li>
+              <li class="jobType">Pre-hung doors</li>
+              <li class="jobType">trim</li>
+              <li class="jobType">baseboards</li>
+              <li class="jobType">wall paneling</li>
+              <li class="jobType">drywall</li>
+              <li class="jobType">custom shelves</li>
+              <li class="jobType">pantry builds</li>
+              <li class="jobType">closet builds</li>
+              <li class="jobType">and more</li>
+            </ul>
+
+            <p class="aboutUsTxtBlock">
+              estimates are free!
+              <a href="#contactUs"> Our contact information</a>.
+            </p>
+          </div>
+        </div>
       </section>
+
+      <!-- Our Work Demo Section -->
       <section class="ourWork" id="ourWork">
         <h2 class="sectionHeader">Our Work</h2>
-        <div class="controlsContainer">
+        <div class="controlsContainer" id="ourWorkControls">
           <!-- Back Button -->
           <button class="controlBtn controlLeft" onclick="cycleWorkDemo(-1)">
             <ion-icon name="arrow-back-outline" class="controlSVG"></ion-icon>
           </button>
           <!-- Actual display portion -->
-          <div class="ourWorkDisplayContainer">
-            <div class="demoWorkImg" id="ourWorkImg"></div>
-          </div>
-          <!-- foward button -->
+          <!-- <img class="demoWorkImg" id="ourWorkImg" /> -->
+
+          <!-- Foward Btn -->
           <button class="controlBtn controlRight" onclick="cycleWorkDemo(1)">
             <ion-icon
               name="arrow-forward-outline"
@@ -65,6 +75,7 @@
         </div>
       </section>
 
+      <!-- Reviews Section -->
       <section class="reviews" id="reviews">
         <h2 class="sectionHeader">Reviews</h2>
         <div class="reviewsContainer">
@@ -96,16 +107,14 @@
         >
       </section>
 
+      <!-- Contact section -->
       <section class="contactUs" id="contactUs">
         <h2 class="sectionHeader">Contact Us</h2>
         <p class="contactUsTxtBlock">
-          Feel free to contact us! Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Animi accusamus distinctio optio ducimus repellat
-          provident nulla. Modi, consectetur iure quidem facilis magnam optio in
-          aspernatur amet sint, incidunt, nihil facere.
+          We do free estimates. Feel free to contact us!
         </p>
-        <span class="contactInfo">Email: JohnDoe@placeholder.com</span>
-        <span class="contactInfo">Phone: 555-2368</span>
+        <span class="contactInfo">Email: nimbus09@comcast.net</span>
+        <span class="contactInfo">Phone: 801-884-7709</span>
       </section>
     </div>
 

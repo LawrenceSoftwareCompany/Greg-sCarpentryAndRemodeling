@@ -1,4 +1,4 @@
-const demoImgElement = document.getElementById("ourWorkImg");
+const demoImgElement = document.getElementById("ourWorkControls");
 const ourWorkTextContainer = document.getElementById("ourWorkTextContainer");
 const reviewWrapper = document.getElementById("reviewWrapper");
 let currentWorkDemo = 0;
@@ -6,169 +6,78 @@ let currentReview = 0;
 const workDemos = [
   {
     src: "demoImgOne",
-    txt: [
-      `        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio
-  quidem modi veritatis? Necessitatibus quis libero quas
-  consequuntur voluptatem velit nihil tenetur distinctio qui
-  quidem ut, voluptate at accusamus incidunt earum. Lorem ipsum
-  dolor sit amet consectetur adipisicing elit. Fuga praesentium
-  tenetur laboriosam, velit corporis nam quas vitae natus libero
-  voluptatem totam laborum impedit debitis blanditiis alias
-  eveniet, qui ipsam repellat.`,
-
-      `          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  Adipisci, quod eos? Maiores asperiores saepe ea quae laboriosam!
-  Exercitationem dignissimos tempora nostrum quis ipsa, culpa
-  labore! Unde minima molestiae illo necessitatibus? Lorem ipsum
-  dolor sit amet consectetur adipisicing elit. Esse aliquid unde
-  sit repellendus corrupti, voluptatum velit repellat pariatur
-  voluptate reiciendis nam porro quam laudantium cum expedita
-  consequuntur iure? Impedit, tempore.`,
-
-      `   Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  Inventore officia dolorem pariatur neque id dolore quasi quis,
-  necessitatibus doloremque fuga illum doloribus provident
-  molestiae facilis nobis eum quia eaque consequuntur?`,
-    ],
   },
   {
     src: "demoImgTwo",
-    txt: [
-      `          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Adipisci, quod eos? Maiores asperiores saepe ea quae laboriosam!
-    Exercitationem dignissimos tempora nostrum quis ipsa, culpa
-    labore! Unde minima molestiae illo necessitatibus? Lorem ipsum
-    dolor sit amet consectetur adipisicing elit. Esse aliquid unde
-    sit repellendus corrupti, voluptatum velit repellat pariatur
-    voluptate reiciendis nam porro quam laudantium cum expedita
-    consequuntur iure? Impedit, tempore.`,
-
-      `        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio
-    quidem modi veritatis? Necessitatibus quis libero quas
-    consequuntur voluptatem velit nihil tenetur distinctio qui
-    quidem ut, voluptate at accusamus incidunt earum. Lorem ipsum
-    dolor sit amet consectetur adipisicing elit. Fuga praesentium
-    tenetur laboriosam, velit corporis nam quas vitae natus libero
-    voluptatem totam laborum impedit debitis blanditiis alias
-    eveniet, qui ipsam repellat.`,
-
-      `   Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Inventore officia dolorem pariatur neque id dolore quasi quis,
-    necessitatibus doloremque fuga illum doloribus provident
-    molestiae facilis nobis eum quia eaque consequuntur?`,
-    ],
   },
 
   {
     src: "demoImgThree",
-    txt: [
-      `   Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Inventore officia dolorem pariatur neque id dolore quasi quis,
-      necessitatibus doloremque fuga illum doloribus provident
-      molestiae facilis nobis eum quia eaque consequuntur?`,
-
-      `          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Adipisci, quod eos? Maiores asperiores saepe ea quae laboriosam!
-    Exercitationem dignissimos tempora nostrum quis ipsa, culpa
-    labore! Unde minima molestiae illo necessitatibus? Lorem ipsum
-    dolor sit amet consectetur adipisicing elit. Esse aliquid unde
-    sit repellendus corrupti, voluptatum velit repellat pariatur
-    voluptate reiciendis nam porro quam laudantium cum expedita
-    consequuntur iure? Impedit, tempore.`,
-
-      `        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio
-    quidem modi veritatis? Necessitatibus quis libero quas
-    consequuntur voluptatem velit nihil tenetur distinctio qui
-    quidem ut, voluptate at accusamus incidunt earum. Lorem ipsum
-    dolor sit amet consectetur adipisicing elit. Fuga praesentium
-    tenetur laboriosam, velit corporis nam quas vitae natus libero
-    voluptatem totam laborum impedit debitis blanditiis alias
-    eveniet, qui ipsam repellat.`,
-    ],
   },
   {
     src: "demoImgFour",
-    txt: [
-      `          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Adipisci, quod eos? Maiores asperiores saepe ea quae laboriosam!
-    Exercitationem dignissimos tempora nostrum quis ipsa, culpa
-    labore! Unde minima molestiae illo necessitatibus? Lorem ipsum
-    dolor sit amet consectetur adipisicing elit. Esse aliquid unde
-    sit repellendus corrupti, voluptatum velit repellat pariatur
-    voluptate reiciendis nam porro quam laudantium cum expedita
-    consequuntur iure? Impedit, tempore.`,
-
-      `        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio
-    quidem modi veritatis? Necessitatibus quis libero quas
-    consequuntur voluptatem velit nihil tenetur distinctio qui
-    quidem ut, voluptate at accusamus incidunt earum. Lorem ipsum
-    dolor sit amet consectetur adipisicing elit. Fuga praesentium
-    tenetur laboriosam, velit corporis nam quas vitae natus libero
-    voluptatem totam laborum impedit debitis blanditiis alias
-    eveniet, qui ipsam repellat.`,
-    ],
   },
+  { src: "demoImgFive" },
 ];
 
 const reviews = [
   {
-    name: "John Doe",
+    name: "Frank B",
     stars: 5,
-    review: ` Lorem ipsum, dolor sit amet consectetur adipisicing elit. In
-  cum, itaque modi sed voluptatibus amet obcaecati deleniti eum
-  recusandae non veniam pariatur cupiditate id perspiciatis?
-  Dolorum explicabo sint accusantium quasi.`,
+    review: ` Greg repaired a drywall eyesore on my great room wall. The repair required repeated visits. Each visit he was on time and did what he said he would do with outstanding results. He is prompt, honest, fair priced and thorough. Best handyman experience I\’ve had.`,
   },
   {
-    name: "Jane Doe",
+    name: "Dirk J",
     stars: 5,
-    review: ` Lorem ipsum, dolor sit amet consectetur adipisicing elit. In
-  cum, itaque modi sed voluptatibus amet obcaecati deleniti eum
-  recusandae non veniam pariatur cupiditate id perspiciatis?
-  Dolorum explicabo sint accusantium quasi.`,
+    review: `Greg responded quickly to our initial message and was at our house helping us out in short order. We had a challenging deadbolt situation and he found a way to make it work. Highly recommend!`,
   },
   {
-    name: "Jack Doe",
+    name: "Troy M",
     stars: 5,
-    review: ` Lorem ipsum, dolor sit amet consectetur adipisicing elit. In
-  cum, itaque modi sed voluptatibus amet obcaecati deleniti eum
-  recusandae non veniam pariatur cupiditate id perspiciatis?
-  Dolorum explicabo sint accusantium quasi.`,
+    review: ` Greg completed a wall framing, drywall installation, trim work, and interior French door installation for our home office loft project. The finished product looks great, there was easy communication, and a fair price. Highly recommended - thanks Greg!`,
+  },
+  {
+    name: "Seth T",
+    stars: 5,
+    review:
+      "Greg installed some baseboards in my home office and did an outstanding job. Fair pricing and fast and efficient service. He went out of his way to get the job done for me. Great communication throughout the scheduling/quoting process. We couldn't be happier and highly recommended. Thanks again!!",
+  },
+  {
+    name: "EMILY H",
+    stars: 5,
+    review:
+      "Greg did some baseboards and door trim for my basement finish. He was super fast, easy to schedule with and the work looks awesome!",
+  },
+  {
+    name: "Gaige K",
+    stars: 5,
+    review: `I had greg do the baseboards, door trim, and door hanging in the basement that I was finishing and he did an amazing job! I had him build a desk in one of the corners of the room and couldn't be happier with the finished product. Greg showed up when he said he would and worked on the job until it was done. Will definitely be using Greg in the future.`,
   },
 ];
 
+// Cycle working demo function
 const cycleWorkDemo = (modifer) => {
-  demoImgElement.childNodes.forEach((child) => {
-    demoImgElement.removeChild(child);
-  });
-
   currentWorkDemo += modifer;
   if (currentWorkDemo == workDemos.length) {
     currentWorkDemo = 0;
   } else if (currentWorkDemo < 0) {
     currentWorkDemo = workDemos.length - 1;
   }
-  demoImgElement.classList = "demoWorkImg " + workDemos[currentWorkDemo].src;
-  const textContainer = document.createElement("div");
-  textContainer.classList = "ourWorkTextContainer";
-  workDemos[currentWorkDemo].txt.forEach((txt) => {
-    const p = document.createElement("p");
-    p.textContent = txt;
-    p.classList = "ourWorkTxtBlock";
-    textContainer.appendChild(p);
-  });
-
-  // demoImgElement.appendChild(textContainer);
+  demoImgElement.classList =
+    "controlsContainer  " + workDemos[currentWorkDemo].src;
 };
 
+// Create review function
 const createReview = (index) => {
   // create current Review
   const div = document.createElement("div");
   div.classList = "review";
+
   // Create the clients name
   const clientName = document.createElement("h3");
   clientName.classList = "clientName";
   clientName.textContent = reviews[index].name;
+
   // Create stars
   const stars = document.createElement("span");
   stars.classList = "stars";
@@ -188,6 +97,7 @@ const createReview = (index) => {
   return div;
 };
 
+// Cycle review function
 const cycleReview = (update) => {
   let clearingChildNodes = true;
 
@@ -206,7 +116,7 @@ const cycleReview = (update) => {
   if (0 > currentReview) {
     currentReview = reviews.length - 1;
   }
-  if (currentReview + update > 3) {
+  if (currentReview + update > reviews.length) {
     currentReview = 0;
   }
   const focusedReview = createReview(currentReview);
