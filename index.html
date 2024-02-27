@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/index.css" />
+    <title>Greg's Carpentry And Remodeling</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="headerNav">
+        <a href="#aboutMe">About us</a>
+        <a href="#myWork">Our Work</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contactMe">Contact Us</a>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <!-- Opening image -->
+      <section class="openingSprawl">
+        <h1>Greg's Carpentry And Remodeling</h1>
+      </section>
+
+      <!-- About us section -->
+      <section class="aboutUsSection" id="aboutUs">
+        <h2 class="sectionHeader">About Me</h2>
+        <div class="aboutUsImgTxtContainer">
+          <div class="aboutUsTxt">
+            <p class="aboutUsTxtBlock">
+              Free estimates - framing, Flooring, pre hung doors, trim,
+              baseboards, wall paneling, drywall, custom shelves, pantry and
+              closet builds, and more Professional License #11238419-5501
+              Located in SL Valley but able to travel to Southern Utah or
+              northern for the correct jobs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Work Demo Section -->
+      <section class="ourWork" id="myWork">
+        <h2 class="sectionHeader">My Work</h2>
+        <div class="controlsContainer" id="ourWorkControls">
+          <!-- Back Button -->
+          <button class="controlBtn controlLeft" onclick="cycleWorkDemo(-1)">
+            <ion-icon name="arrow-back-outline" class="controlSVG"></ion-icon>
+          </button>
+          <div class="demoContainer"></div>
+          <!-- Foward Button -->
+          <button class="controlBtn controlRight" onclick="cycleWorkDemo(1)">
+            <ion-icon
+              name="arrow-forward-outline"
+              class="controlSVG"
+            ></ion-icon>
+          </button>
+        </div>
+      </section>
+
+      <!-- Reviews Section -->
+      <section class="reviews" id="reviews">
+        <h2 class="sectionHeader">Reviews</h2>
+        <div class="reviewsContainer">
+          <!-- Go back Btn -->
+          <button
+            class="controlBtn reviewsControl controlLeft"
+            onclick="cycleReview(-1)"
+          >
+            <ion-icon name="arrow-back-outline" class="controlSVG"></ion-icon>
+          </button>
+          <!-- Review -->
+          <div class="reviewWrapper" id="reviewWrapper"></div>
+          <!-- Go forward Btn -->
+          <button
+            class="controlBtn reviewsControl controlRight"
+            onclick="cycleReview(1)"
+          >
+            <ion-icon
+              name="arrow-forward-outline"
+              class="controlSVG"
+            ></ion-icon>
+          </button>
+        </div>
+        <a
+          href="https://services.ksl.com/ut/salt-lake-city/handyman/gregs-carpentry-and-remodeling-services/141971"
+          target="_blank"
+          class="moreReviewsLink"
+          >More Reviews</a
+        >
+      </section>
+
+      <!-- Contact section -->
+      <section class="contactUs" id="contactMe">
+        <h2 class="sectionHeader">Contact Me</h2>
+        <p class="contactUsTxtBlock">
+          We do free estimates. Feel free to contact us!
+        </p>
+        <span class="contactInfo">Email: nimbus09@comcast.net</span>
+        <span class="contactInfo">Phone: 801-884-7709</span>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div>
+        <nav class="footerNav">
+          <a href="#aboutMe">About us</a>
+          <a href="#MyWork">Our Work</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contactMe">Contact Us</a>
+        </nav>
+        <span class="credit"
+          >Website by:
+          <a class="creditLink" href="lawrencesoftwarecompany.com"
+            >Lawrence Software Company</a
+          ></span
+        >
+      </div>
+      <div></div>
+      <div></div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="./src/index.js"></script>
+  </body>
+</html>
