@@ -141,5 +141,11 @@ const cycleReview = (update) => {
   }, 360);
 };
 
+const addPhoneNmbr = () => {
+  const node = document.getElementById("phoneNmbr");
+  node.textContent = "Phone: 801-884-7709";
+};
+
+addPhoneNmbr();
 cycleWorkDemo(0);
 cycleReview(0);
